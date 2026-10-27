@@ -5,7 +5,7 @@ data and licences). Made from the organizers' template `CeviKle/EURS-MaCVi2027-r
 
 ```
 run.py            main(model_dir, input_dir, output_dir, device): restored/<stem>.jpg + seg_masks/<stem>.png
-src/              model code (restorers, segmenters, SAM 3 rules); restormer_arch.py is the official Restormer (MIT)
+src/              model code (restorers, segmenters, SAM 3 rules), and restormer_arch.py is the official Restormer (MIT)
 weights/          weights_link.yaml: one public zip (~11.6 GB), unpacked into weights/ (licence texts in its LICENSES/)
 WEIGHTS_SHA256.txt  SHA-256 of every checkpoint inside that zip
 Dockerfile        pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime + requirements.txt (organizer ruling, 27 Oct)
