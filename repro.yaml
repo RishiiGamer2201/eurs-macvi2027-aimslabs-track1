@@ -1,0 +1,6 @@
+# The organizers rebuild this file from your factsheet and the leaderboard, so it only has to be valid here.
+team: aimslabs                  # exactly as registered on macvi.org
+track: eurs-t1
+submission_id: 19381            # aimslabs_t1_final, user 1995, composite 0.739 (re-upload of t1_test_102)
+contact: you@example.org        # TODO: an address the team checks during Oct 28-30
+hardware: RTX 5070 Ti 16 GB (leaderboard run); fits one RTX 3090

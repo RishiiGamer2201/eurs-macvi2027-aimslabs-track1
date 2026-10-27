@@ -1,0 +1,6 @@
+# One stored zip (11.6 GB, organizer OK for up to 20 GB on 27 Oct), unpacked into weights/ keeping its folders:
+# restorer_a/ restorer_b/ seg/ seg_vk/ epfl_coralscapesv2_dinov3_vitl_dpt/ mask2former_config/ sam3/ LICENSES/
+# Licence texts (SAM License, DINOv3 License, Apache-2.0, MIT) and a file-to-licence table are in LICENSES/.
+url: https://huggingface.co/LogicPalette/eurs-macvi2027-aimslabs-track1-weights/resolve/main/aimslabs_eurs_t1_weights.zip
+sha256: d4ce3498fb99bdbf5a9b637598c609b51cd54e369ab2969c07adaa8ab7091afc
+filename: aimslabs_eurs_t1_weights.zip
