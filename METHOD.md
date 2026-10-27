@@ -24,7 +24,7 @@ Restored images are written as JPEG quality 97 with 4:4:4 chroma, exactly as in 
 1. Mean softmax of five ViT-L segmenters fine-tuned on EURS:
    - DINOv3-L/16 with a simple head
    - DINOv3-L with a Mask2Former decoder on a ViTDet pyramid
-   - DINOv3-L with an FPN/UPerNet head
+   - DINOv3-L with an FPN-style decoder inspired by UPerNet, without pyramid pooling
    - DINOv2-L/14-reg4 with a simple head
    - DINOv3-L with a simple head, trained with Coralscapes crops (30 % of its non-dev crops, 22.5 % of all)
 2. The frozen EPFL CoralscapesV2 DINOv3-L LoRA-DPT re-splits the background + coral probability (weight 0.55). Thing
@@ -35,7 +35,7 @@ Restored images are written as JPEG quality 97 with 4:4:4 chroma, exactly as in 
 4. Probabilities are quantised to uint8, fish is scaled by 1.5, and the argmax is taken.
 5. SAM 3 (Meta), prompted with animal names on each image alone (instance threshold 0.3, mask threshold 0.5,
    score-weighted masks combined by per-class maximum), applies two rules:
-   - Elasmobranch pixels where SAM 3 sees no animal (map < 0.2) take the nearest other label. This is skipped if it
+   - Elasmobranch pixels where SAM 3 sees no animal (map < 0.2) take the nearest retained pixel's label. This is skipped if it
      would remove more than half of them.
    - In images where the ensemble already predicts fish, background or coral pixels where SAM 3's fish map is > 0.5
      become fish.
